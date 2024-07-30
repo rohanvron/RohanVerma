@@ -30,7 +30,7 @@ const Skills = () => {
   ]
 
   return (
-    <div className="container mx-auto mt-4">
+    <div id='skills' className="container mx-auto mt-4">
       <div className="flex flex-col md:flex-row gap-4 p-4">
         <div className="w-full p-4">
           <h1 className="text-2xl mb-8 font-semibold">Skills</h1>

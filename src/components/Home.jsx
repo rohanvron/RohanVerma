@@ -10,7 +10,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container mx-auto mt-4">
+    <div id='home' className="container mx-auto mt-4">
       <div className="flex flex-col md:flex-row gap-4 bg-base-200 rounded-box shadow-xl p-4">
         <div className="w-full md:w-2/3 p-4">
           <div className="mockup-browser border bg-base-300">

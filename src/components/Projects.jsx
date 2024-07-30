@@ -14,7 +14,7 @@ import rudrasignages from "../assets/projects/rudrasignages.png";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="flex flex-col bg-base-200 rounded-lg p-4 shadow-md">
+    <div id="projects" className="flex flex-col bg-base-200 rounded-lg p-4 shadow-md">
       <div className="relative group w-full h-48 mb-2 overflow-hidden">
         <img
           src={project.image}
@@ -29,12 +29,16 @@ const ProjectCard = ({ project }) => {
           />
         )}
         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <a href={project.live} className="btn btn-primary btn-sm mr-2">
-            <FaExternalLinkAlt className="mr-1" /> Live
-          </a>
-          <a href={project.github} className="btn btn-secondary btn-sm">
-            <FaGithub className="mr-1" /> GitHub
-          </a>
+        {project.live && (
+            <a href={project.live} className="btn btn-primary btn-sm mr-2">
+              <FaExternalLinkAlt className="mr-1" /> Live
+            </a>
+          )}
+          {project.github && (
+            <a href={project.github} className="btn btn-sm">
+              <FaGithub className="mr-1" /> GitHub
+            </a>
+          )}
         </div>
       </div>
       <p className="font-medium">{project.title}</p>
@@ -55,64 +59,62 @@ const Projects = () => {
       title: "ChatApp - MERN",
       image: chatapp,
       gif: chatappGIF,
-      live: "#",
-      github: "#",
+      live: "https://chatapp.adaptable.app",
+      github: "https://github.com/rohanvron/ChatApp-MERN",
       technologies: ["MERN", "Socket.io", "tailwindcss","API"],
     },
     {
       title: "Rock Paper Scissors",
       image: rockpaperscissors,
-      live: "#",
-      github: "#",
+      live: "https://rohanvron.github.io/Rock-Paper-Scissors/",
+      github: "https://github.com/rohanvron/Rock-Paper-Scissors",
       technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
       title: "Age Calculator",
       image: agecalculator,
-      live: "#",
-      github: "#",
+      live: "https://rohanvron.github.io/Age-Calculator-App/",
+      github: "https://github.com/rohanvron/Age-Calculator-App",
       technologies: ["HTML", "CSS", "JavaScript", "React"],
     },
     {
       title: "Card Maker",
       image: cardmaker,
-      live: "#",
-      github: "#",
+      live: "https://rohanvron.github.io/CardMaker/",
+      github: "https://github.com/rohanvron/CardMaker",
       technologies: ["React", "tailwindcss", "JavaScript", "spring"],
     },
     {
       title: "Newsletter Signup",
       image: newsletter,
-      live: "#",
-      github: "#",
+      live: "https://rohanvron.github.io/Newsletter-sign-up/",
+      github: "https://github.com/rohanvron/Newsletter-sign-up",
       technologies: ["React", "tailwindcss", "JavaScript"],
     },
     {
       title: "Advice Generator",
       image: advicegenerator,
-      live: "#",
-      github: "#",
+      live: "https://rohanvron.github.io/Advice-Generator-App/",
+      github: "https://github.com/rohanvron/Advice-Generator-App",
       technologies: ["react", "api", "tailwindcss", "Jsx"],
     },
     {
       title: "To Do List",
       image: todolist,
-      live: "#",
-      github: "#",
+      live: "https://rohanvron.github.io/To-Do-List/",
+      github: "https://github.com/rohanvron/To-Do-List",
       technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
       title: "MoviezHub",
       image: moviezhub,
-      live: "#",
-      github: "#",
+      github: "https://github.com/rohanvron/MoviezHub---Online-Movie-Ticket-Booking-App",
       technologies: ["Java", "Android-Studio", "Firebase"],
     },
     { 
         title: "Rudra Signages", 
         image: rudrasignages, 
-        live: "#", 
-        github: "#",
+        live: "https://rudrasignages.co.in/",
         technologies: ["Wordpress", "Elementor", "Photoshop"],
     },
   ];
